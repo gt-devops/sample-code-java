@@ -36,30 +36,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-
-        
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version>
-        <configuration>
-          <classifier>package</classifier>
-          <classesDirectory>src</classesDirectory>
-          <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
-          <includes>
-            <include>*.java</include>
-          </includes>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>        
-        
+      </plugin>      
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
