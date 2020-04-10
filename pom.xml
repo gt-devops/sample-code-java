@@ -13,10 +13,10 @@
  
     <build>
   <finalName>${project.artifactId}-${project.version}</finalName>
-  <sourceDirectory>java/src</sourceDirectory>
+  <sourceDirectory>java/src/</sourceDirectory>
   <resources>
     <resource>
-      <directory>java/src</directory>
+      <directory>java/src/</directory>
     </resource>
   </resources>
       <plugins>
@@ -38,7 +38,7 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.5.1</version>
             <configuration>
-               <source>java/src</source>
+               <source>${jdk.level}</source>
                <target>${jdk.level}</target>
             </configuration>
          </plugin>
