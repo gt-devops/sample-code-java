@@ -38,14 +38,16 @@
         </executions>
       </plugin>
           <plugin>
-            <inherited>true</inherited>
-            <artifactId>maven-javadoc-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>            
+            <artifactId>maven-jar-plugin</artifactId>
               <configuration>
+                    <classesDirectory>src</classesDirectory>
+
                 <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
               </configuration>
             <executions>
               <execution>
-                <id>attach-javadocs</id>
+                <id>package</id>
                 <goals>
                   <goal>jar</goal>
                 </goals>
