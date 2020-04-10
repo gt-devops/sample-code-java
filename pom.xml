@@ -31,8 +31,8 @@
         <executions>
           <execution>
             <goals>
-              <goal>include src</goal>
-                     </goals>
+              <goal>include-src</goal>
+            </goals>
 
               <sources>
                 <source>src</source>
