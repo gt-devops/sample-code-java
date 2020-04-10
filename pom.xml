@@ -41,7 +41,6 @@
           <groupId>org.apache.maven.plugins</groupId>            
             <artifactId>maven-jar-plugin</artifactId>
                     <version>3.2.0</version>
-<classifier>package</classifier>
               <configuration>
                 <includes>
   <include>src</include>
@@ -50,6 +49,8 @@
               </configuration>
             <executions>
               <execution>
+                <classifier>package</classifier>
+
                 <goals>
                   <goal>jar</goal>
                 </goals>
