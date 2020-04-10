@@ -38,18 +38,13 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.5.1</version>
             <configuration>
-               <source>${jdk.level}</source>
+               <source>java/src</source>
                <target>${jdk.level}</target>
             </configuration>
          </plugin>
       </plugins>
    </build>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
+    
   </dependencies>
 </project>
