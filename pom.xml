@@ -49,13 +49,12 @@
               </configuration>
             <executions>
               <execution>
-                <classifier>package</classifier>
-
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-              </execution>
-            </executions>
+    <id>default-jar</id>
+    <phase>package</phase>
+    <goals>
+        <goal>jar</goal>
+    </goals>
+</execution>
           </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
