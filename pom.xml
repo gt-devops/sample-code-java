@@ -40,14 +40,15 @@
           <plugin>
           <groupId>org.apache.maven.plugins</groupId>            
             <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+<includes>
+  <include>src</include>
+  </includes>
               <configuration>
-                    <classesDirectory>src</classesDirectory>
-
                 <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
               </configuration>
             <executions>
               <execution>
-                <id>package</id>
                 <goals>
                   <goal>jar</goal>
                 </goals>
