@@ -1,0 +1,23 @@
+def userInput
+pipeline {
+    agent any
+    stages {
+        stage("checkout") {
+            steps {
+  	         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/gtyagi2018/sample-code-java.git']]]) 
+            }
+        }
+        stage("Input"){
+            steps {
+                script {
+            userInput = input(id: 'userInput', message: 'usr_build_path', parameters: [[$class: 'StringParameterDefinition', name:'userInput']])
+            }
+            }
+        }
+        stage("Build"){
+            steps{
+                echo userInput
+                sh 'mvn clean install package -Dusr_build_path='+userInput+' -Dtimestamp="$(date +%Y%m%d%H%M%S)"'
+            }
+        }
+    }
