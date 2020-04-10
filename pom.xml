@@ -32,11 +32,12 @@
           <execution>
             <goals>
               <goal>include src</goal>
+                     </goals>
+
               <sources>
                 <source>src</source>
            
               </sources>
-            </goals>
           </execution>
         </executions>
       </plugin>
