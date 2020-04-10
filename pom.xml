@@ -13,10 +13,10 @@
  
     <build>
   <finalName>${project.artifactId}-${project.version}</finalName>
-  <sourceDirectory>java/src/</sourceDirectory>
+  <sourceDirectory>src</sourceDirectory>
   <resources>
     <resource>
-      <directory>java/src/</directory>
+      <directory>src</directory>
     </resource>
   </resources>
       <plugins>
