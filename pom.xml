@@ -33,12 +33,25 @@
           <execution>
             <goals>
               <goal>test-jar</goal>
-              <goal>jar</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
-
+          <plugin>
+            <inherited>true</inherited>
+            <artifactId>maven-javadoc-plugin</artifactId>
+              <configuration>
+                <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
+              </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
