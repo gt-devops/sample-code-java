@@ -31,16 +31,8 @@
         <executions>
           <execution>
             <goals>
-              <goal>include-src</goal>
+              <goal>test-jar</goal>
             </goals>
-            <configuration>
-
-              <sources>
-                <source>src</source>
-           
-              </sources>
-                    </configuration>
-
           </execution>
         </executions>
       </plugin>
