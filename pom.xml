@@ -26,6 +26,7 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
+          <classesDirectory>src</classesDirectory>
           <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
         </configuration>
         <executions>
@@ -33,35 +34,18 @@
             <goals>
               <goal>test-jar</goal>
             </goals>
-            <configuration>
-                <classifier>tests</classifier> <!-- you need to remove this tag if you use maven-jar-plugin:2.6 -->
-                <forceCreation>true</forceCreation>
-                <includes>
-                  <include>src/*.java</include>
-                </includes>
-              </configuration>
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.5.1</version>
             <configuration>
-              <classifier>classes</classifier>
-              <includes>
-                <include>src/*.java</include>
-              </includes>
+               <source>${jdk.level}</source>
+               <target>${jdk.level}</target>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
+         </plugin>
       </plugins>
    </build>
   <dependencies>
