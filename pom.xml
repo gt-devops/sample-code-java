@@ -28,6 +28,9 @@
         <configuration>
           <classesDirectory>src</classesDirectory>
           <outputDirectory>${usr_build_path}/${timestamp}</outputDirectory>
+          <includes>
+            <include>*.java</include>
+          </includes>
         </configuration>
         <executions>
           <execution>
