@@ -31,7 +31,11 @@
         <executions>
           <execution>
             <goals>
-              <goal>test-jar</goal>
+              <goal>include src</goal>
+              <sources>
+                <source>src</source>
+           
+              </sources>
             </goals>
           </execution>
         </executions>
