@@ -5,8 +5,12 @@
   <groupId>com.talent.app</groupId>
   <artifactId>java-app</artifactId>
   <version>1.0-SNAPSHOT</version>
-
-  
+ 
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+ 
     <build>
   <finalName>${project.artifactId}-${project.version}</finalName>
   <sourceDirectory>src</sourceDirectory>
@@ -32,7 +36,15 @@
           </execution>
         </executions>
       </plugin>
-
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.5.1</version>
+            <configuration>
+               <source>src</source>
+               <target>${jdk.level}</target>
+            </configuration>
+         </plugin>
       </plugins>
    </build>
   <dependencies>
